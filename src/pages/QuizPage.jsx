@@ -1,8 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Button from "../components/Button/Button";
 import Display from "../components/Display/Display";
 import quizData from "../data/quiz";
-import { RuleTester } from "eslint";
+import { useNavigate } from "react-router-dom";
 
 export default function QuizPage() {
     const [quizIndex, setQuizIndex] = useState(0);
