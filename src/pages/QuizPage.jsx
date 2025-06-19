@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../const";
 import Button from "../components/Button/Button";
 import Display from "../components/Display/Display";
 import quizData from "../data/quiz";
-import { useNavigate } from "react-router-dom";
 
 export default function QuizPage() {
     const [quizIndex, setQuizIndex] = useState(0);
@@ -26,7 +27,7 @@ export default function QuizPage() {
             navigation(ROUTES.RESULT, {
                 state: {
                     maxQuizLen: MAX_QUIZ_LEN,
-                    correctNum: correctNum
+                    correctNumLen: correctNum.length
                 },
             });
         }
